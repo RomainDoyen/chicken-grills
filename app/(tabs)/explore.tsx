@@ -1,6 +1,6 @@
 import { StyleSheet, Image, Platform, View } from 'react-native';
 import React, { useState } from 'react';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 export default function TabTwoScreen() {
 
@@ -16,7 +16,13 @@ export default function TabTwoScreen() {
       <MapView
         style={styles.map}
         initialRegion={region}
-      />
+      >
+        <Marker
+          coordinate={{ latitude: -20.9606333, longitude: 55.6492731 }}
+          title="Poulet Grillé 1"
+          description="Le meilleur poulet grillé de la ville !"
+        />
+      </MapView>
     </View>
   );
 }
